@@ -15,6 +15,7 @@
 		876CF29225AB0224003FCE25 /* EmojiPainterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF29125AB0224003FCE25 /* EmojiPainterUITests.swift */; };
 		876CF33C25AD4D11003FCE25 /* EmojiPixelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF33B25AD4D11003FCE25 /* EmojiPixelButton.swift */; };
 		876CF34125AD5C30003FCE25 /* CurrentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF34025AD5C30003FCE25 /* CurrentColor.swift */; };
+		876CF34625AD79DC003FCE25 /* EmojiPixels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CF34525AD79DC003FCE25 /* EmojiPixels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		876CF29325AB0224003FCE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		876CF33B25AD4D11003FCE25 /* EmojiPixelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPixelButton.swift; sourceTree = "<group>"; };
 		876CF34025AD5C30003FCE25 /* CurrentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentColor.swift; sourceTree = "<group>"; };
+		876CF34525AD79DC003FCE25 /* EmojiPixels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiPixels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				876CF27925AB0224003FCE25 /* Preview Content */,
 				876CF33B25AD4D11003FCE25 /* EmojiPixelButton.swift */,
 				876CF34025AD5C30003FCE25 /* CurrentColor.swift */,
+				876CF34525AD79DC003FCE25 /* EmojiPixels.swift */,
 			);
 			path = EmojiPainter;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				876CF27425AB0223003FCE25 /* EmojiPainterApp.swift in Sources */,
 				876CF33C25AD4D11003FCE25 /* EmojiPixelButton.swift in Sources */,
 				876CF34125AD5C30003FCE25 /* CurrentColor.swift in Sources */,
+				876CF34625AD79DC003FCE25 /* EmojiPixels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

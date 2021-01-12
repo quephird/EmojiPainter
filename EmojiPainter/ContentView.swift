@@ -9,13 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var currentColor: CurrentColor = CurrentColor(defaultColor: .white)
+    @ObservedObject var pixels: EmojiPixels = EmojiPixels(pixels: Array(repeating: Array(repeating: "⬜️", count: 10), count: 13))
 
     var body: some View {
         VStack {
-            ForEach(0..<13) { idx in
+            ForEach(0..<13) { row in
                 HStack(alignment: .center) {
-                    ForEach(0..<10) { idx in
-                        EmojiPixelButton(currentColor: self.currentColor)
+                    ForEach(0..<10) { column in
+                        EmojiPixelButton(
+                            currentColor: self.currentColor, pixels: self.pixels,
+                            row: row,
+                            column: column)
                     }
                 }
             }
@@ -50,9 +54,15 @@ struct ContentView: View {
                 Button("📋", action: {
                     let pasteboard = NSPasteboard.general
                     pasteboard.clearContents()
-                    pasteboard.setString("🟥🟧🟨🟩🟦🟪🟫⬛️⬜️", forType: .string)
+                    pasteboard.setString(toString(pixels: self.pixels), forType: .string)
                 })
             }
         }.frame(width: 260, height: 390)
+    }
+
+    func toString(pixels: EmojiPixels) -> String {
+        return pixels.pixels.map { row in
+            return row.joined()
+        }.joined(separator: "\n")
     }
 }
