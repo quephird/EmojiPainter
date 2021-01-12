@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var currentColor: Color = .black
+    @ObservedObject var currentColor: CurrentColor = CurrentColor(defaultColor: .white)
 
     var body: some View {
         VStack {
-            ForEach(0..<12) { idx in
+            ForEach(0..<13) { idx in
                 HStack(alignment: .center) {
                     ForEach(0..<10) { idx in
-                        Button("", action: {
-                            print("I was clicked")
-                        })
+                        EmojiPixelButton(currentColor: self.currentColor)
                     }
                 }
             }
             Button("", action: {
-                self.currentColor = .purple
+                self.currentColor.currentColor = .purple
             })
-        }.frame(width: 250, height: 350)
+        }.frame(width: 260, height: 390)
     }
 }
