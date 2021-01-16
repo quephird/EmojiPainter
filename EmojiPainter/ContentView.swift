@@ -15,15 +15,15 @@ import SwiftUI
 // * Need to be able select other "brushes"  like 💙 or 🔵
 struct ContentView: View {
     private var paintColors: [Color] = [
-        Color.red,
-        Color.orange,
-        Color.yellow,
-        Color.green,
-        Color.blue,
-        Color.purple,
-        Color.brown,
-        Color.white,
-        Color.black
+        .red,
+        .orange,
+        .yellow,
+        .green,
+        .blue,
+        .purple,
+        .brown,
+        .white,
+        .black
     ]
 
     @ObservedObject var currentColor: CurrentColor = CurrentColor(defaultColor: .white)
