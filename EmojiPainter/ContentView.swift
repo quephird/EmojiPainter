@@ -41,19 +41,28 @@ struct ContentView: View {
                     }
                 }
             }
-            HStack {
+            HStack() {
                 ForEach(paintColors, id: \.self) { paintColor in
                     Button("", action: {
                         self.currentColor.currentColor = paintColor
-                    }).background(paintColor)
+                    })
+                    .background(paintColor)
                 }
-                Button("📋", action: {
-                    let pasteboard = NSPasteboard.general
-                    pasteboard.clearContents()
-                    pasteboard.setString(toString(pixels: self.pixels), forType: .string)
-                })
             }
-        }.frame(width: 260, height: 390)
+            HStack() {
+                Button("📋", action: self.handlePasteboard)
+                Button("🪣", action: self.handleBucket)
+            }
+        }.frame(width: 260, height: 420)
+    }
+
+    func handlePasteboard() -> Void {
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(toString(pixels: self.pixels), forType: .string)
+    }
+
+    func handleBucket() -> Void {
     }
 
     func toString(pixels: EmojiPixels) -> String {
